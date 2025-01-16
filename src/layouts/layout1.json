@@ -1,0 +1,9 @@
+[
+    {
+        "type": "container",
+        "layout": "default",
+        "nodes": [
+            { "type": "con", "swallows": [{ "class": "Chromium" }] }
+        ]
+    }
+]

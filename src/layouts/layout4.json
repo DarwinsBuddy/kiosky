@@ -1,0 +1,24 @@
+[
+    {
+        "type": "container",
+        "layout": "splitv",
+        "nodes": [
+            {
+                "type": "container",
+                "layout": "splith",
+                "nodes": [
+                    { "type": "con", "swallows": [{ "class": "Chromium" }] },
+                    { "type": "con", "swallows": [{ "class": "Chromium" }] }
+                ]
+            },
+            {
+                "type": "container",
+                "layout": "splith",
+                "nodes": [
+                    { "type": "con", "swallows": [{ "class": "Chromium" }] },
+                    { "type": "con", "swallows": [{ "class": "Chromium" }] }
+                ]
+            }
+        ]
+    }
+]
