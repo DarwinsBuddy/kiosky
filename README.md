@@ -1,14 +1,16 @@
 ## Setup
 ### on the kiosk machine
 1. Install prerequisites
-`sudo apt-get install rsync git vim unclutter`
+`sudo apt-get install rsync git vim unclutter xdotool`
 > Note
 > 
 > `rsync` for manual deployment
 > 
 > `git` `vim` for personal set up preferences (optional)
 > 
-> `unclutter` to hide the cursor when it's not used 
+> `unclutter` to hide the cursor when it's not used
+>
+> `xdotool` to hit `F5` regularly on the opened chromium tabs so they are staying fresh
 1. Install `i3` wm
 ```
 sudo apt install i3
@@ -21,12 +23,22 @@ set lightdm `autologin-user-session=i3` in `/etc/lightdm/lightdm.conf`
 1. disable screen blanking
 `sudo raspi-config` -> `Display Options` -> `Screen Blanking` -> `disable`
 
+1. Setup cron job for `reload.sh` every 1 minute to refresh all chromium windows
+   `crontab -e
+
 ### on your machine
 1. configure your setup in `src/env.sh`
 2. (optional) setup public-key login with `ssh-copy-id` for easier deployment
-3. Edit the config `vim src/launch.sh`
-4. Deploy the config `./deploy.sh`
+3. (optional) Edit the config `vim src/launch.sh`
+4. Change urls you want to display
+   `cp urls.example.sh src/urls.sh`
+5. Deploy the config `./deploy.sh`
 
+
+### Extensions
+
+* `uBlock` for ad removal
+* `Cookie Monster` for auto declining cookie banners
 
 ### Troubleshooting
 

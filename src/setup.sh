@@ -35,10 +35,25 @@ mv "$temp_file" "$I3_CONFIG_FILE"
 cp -ar "$LAYOUTS_DIR" "$I3_CONFIG_DIR"
 # Replace scripts
 cp "$KIOSKY_DIR/env.sh" "$I3_CONFIG_DIR"
+cp "$KIOSKY_DIR/urls.sh" "$I3_CONFIG_DIR"
 cp "$KIOSKY_DIR/cycle_workspaces.sh" "$I3_CONFIG_DIR"
 cp "$KIOSKY_DIR/kill_and_restart.sh" "$I3_CONFIG_DIR"
 cp "$KIOSKY_DIR/launch.sh" "$I3_CONFIG_DIR"
+cp "$KIOSKY_DIR/reload.sh" "$I3_CONFIG_DIR"
 
 echo "The i3 config file has been updated. All scripts have been replaced"
 i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) restart
+
+cron_jobs=(
+  "* * * * * ~/.config/i3/next_workspace.sh"
+  "*/10 * * * * ~/.config/i3/reload.sh"
+)
+
+{
+  for job in "${cron_jobs[@]}"; do
+    echo "$job"
+  done
+} | crontab -
+
+$KIOSKY_DIR/launch.sh &
 

@@ -7,13 +7,5 @@ I3_CONFIG_DIR="/home/${USERNAME}/.config/i3"
 I3_CONFIG_FILE="${I3_CONFIG_DIR}/config"
 TIMEOUT=60
 
-urls=(
-    "https://weirdorconfusing.com/"
-    "https://orf.at"
-    "http://corndog.io/"
-    "https://topfdeckel.at/tageskarte"
-    "https://www.bbc.com/weather/2761369"
-    "https://metalab.at"
-    "https://www.window-swap.com/Window"
-    "https://puginarug.com/"
-)
+CURRENT_DIR=$(dirname ${BASH_SOURCE[0]})
+source "${CURRENT_DIR}/urls.sh"

@@ -19,5 +19,5 @@ exec xset s off -dpms
 # Launch all layouts + chromium browsers
 exec ~/.config/i3/launch.sh
 
-# Automatically cycle through all workspaces
-exec "~/.config/i3/kill_and_restart.sh cycle_workspaces.sh"
+# Automatically cycle through all workspaces (legacy, let's move to cronjob for this)
+# exec "~/.config/i3/kill_and_restart.sh cycle_workspaces.sh"
