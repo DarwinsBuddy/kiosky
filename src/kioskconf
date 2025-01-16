@@ -8,6 +8,11 @@ workspace 8 output HDMI-1
 workspace 9 output HDMI-1
 workspace 10 output HDMI-1
 
+
+# hide status bars
+default_border pixel 1
+default_floating_border pixel 1
+
 # disable lock and screen timeout
 exec xset s off -dpms
 

@@ -34,6 +34,7 @@ mv "$temp_file" "$I3_CONFIG_FILE"
 # Replace all layouts
 cp -ar "$LAYOUTS_DIR" "$I3_CONFIG_DIR"
 # Replace scripts
+cp "$KIOSKY_DIR/env.sh" "$I3_CONFIG_DIR"
 cp "$KIOSKY_DIR/cycle_workspaces.sh" "$I3_CONFIG_DIR"
 cp "$KIOSKY_DIR/kill_and_restart.sh" "$I3_CONFIG_DIR"
 cp "$KIOSKY_DIR/launch.sh" "$I3_CONFIG_DIR"

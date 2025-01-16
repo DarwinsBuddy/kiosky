@@ -4,7 +4,7 @@
 pkill chromium
 
 ARGS="--new-window"
-urls = (
+urls=(
     "https://weirdorconfusing.com/"
     "https://orf.at"
     "http://corndog.io/"
@@ -42,6 +42,3 @@ for url in "${urls[@]}"; do
     i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) "exec chromium $ARGS --app=$url"
     sleep .5
 done
-# hide status bars
-default_border pixel 1
-default_floating_border pixel 1

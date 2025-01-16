@@ -1,0 +1,8 @@
+KIOSK_CONFIG_FILE="kioskconf"
+HOST="192.168.2.69"
+USERNAME="pi"
+KIOSKY_DIR="/home/${USERNAME}/kiosky"
+LAYOUTS_DIR="$KIOSKY_DIR/layouts"
+I3_CONFIG_DIR="/home/${USERNAME}/.config/i3"
+I3_CONFIG_FILE="${I3_CONFIG_DIR}/config"
+TIMEOUT=60
