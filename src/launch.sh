@@ -1,19 +1,11 @@
 #!/bin/bash
 
+source "/home/pi/.config/i3/env.sh"
+
 # Kill all browser windows
 pkill chromium
 
 ARGS="--new-window"
-urls=(
-    "https://weirdorconfusing.com/"
-    "https://orf.at"
-    "http://corndog.io/"
-    "https://topfdeckel.at/tageskarte"
-    "https://www.bbc.com/weather/2761369"
-    "https://metalab.at"
-    "https://www.window-swap.com/Window"
-    "https://puginarug.com/"
-)
 
 # Get the size of the array
 array_size=${#urls[@]}
