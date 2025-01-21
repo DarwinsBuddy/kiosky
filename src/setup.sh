@@ -48,6 +48,7 @@ i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) restart
 cron_jobs=(
   "* * * * * ~/.config/i3/next_workspace.sh"
   "*/10 * * * * ~/.config/i3/reload.sh"
+  "0 4 * * * shutdown -r now"
 )
 
 {
