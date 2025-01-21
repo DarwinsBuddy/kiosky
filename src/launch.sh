@@ -6,7 +6,7 @@ source "/home/pi/.config/i3/env.sh"
 
 # Kill all browser windows
 pkill chromium
-sleep $DELAY
+sleep 2
 ARGS="--new-window --disable-application-cache --disk-cache-size=0 --disable-features=Translate"
 
 # Get the size of the array
@@ -19,8 +19,9 @@ LIVE_WORKSPACES=$(i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) -t ge
 for i in $(seq 1 $LIVE_WORKSPACES);
 do
     i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) "[workspace=\"$i\"] kill"
+    sleep 1
 done
-sleep $DELAY
+sleep 2
 echo "Hide cursor"
 # hide the cursor
 i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) "exec unclutter -idle 0"
