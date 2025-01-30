@@ -1,6 +1,9 @@
 #!/bin/bash
 source env.sh
 
+## DELETE crontab
+crontab -r
+
 START="# ===kiosky:start==="
 END="# ===kiosky:end==="
 # Ensure both $KIOSK_CONFIG_FILE and $I3_CONFIG_FILE are set
@@ -43,12 +46,12 @@ cp "$KIOSKY_DIR/launch.sh" "$I3_CONFIG_DIR"
 cp "$KIOSKY_DIR/reload.sh" "$I3_CONFIG_DIR"
 
 echo "The i3 config file has been updated. All scripts have been replaced"
-i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) restart
+# i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) restart
 
+## SETUP crontab again
 cron_jobs=(
-  "* * * * * ~/.config/i3/next_workspace.sh"
+  "* */2 * * * ~/.config/i3/next_workspace.sh"
   "*/10 * * * * ~/.config/i3/reload.sh"
-  "0 4 * * * shutdown -r now"
 )
 
 {

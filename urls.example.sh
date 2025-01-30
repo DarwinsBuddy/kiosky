@@ -8,3 +8,8 @@ urls=(
     "https://www.window-swap.com/Window"
     "https://puginarug.com/"
 )
+
+layouts=(
+    "4" # layout of workspace 1
+    "4"  # layout of workspace 2
+)
