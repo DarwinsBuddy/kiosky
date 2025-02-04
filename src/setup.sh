@@ -51,7 +51,7 @@ echo "The i3 config file has been updated. All scripts have been replaced"
 ## SETUP crontab again
 cron_jobs=(
   "* */2 * * * ~/.config/i3/next_workspace.sh"
-  "*/10 * * * * ~/.config/i3/reload.sh"
+  "* */10 * * * ~/.config/i3/reload.sh"
 )
 
 {
