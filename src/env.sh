@@ -1,5 +1,5 @@
 KIOSK_CONFIG_FILE="kioskconf"
-HOST="192.168.2.69"
+HOST="192.168.1.85"
 USERNAME="pi"
 KIOSKY_DIR="/home/${USERNAME}/kiosky"
 LAYOUTS_DIR="$KIOSKY_DIR/layouts"
@@ -8,4 +8,4 @@ I3_CONFIG_FILE="${I3_CONFIG_DIR}/config"
 TIMEOUT=60
 
 CURRENT_DIR=$(dirname ${BASH_SOURCE[0]})
-source "${CURRENT_DIR}/urls.sh"
+source "${CURRENT_DIR}/config.sh"

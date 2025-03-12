@@ -14,7 +14,7 @@ num_urls=${#urls[@]}
 num_layouts=${#layouts[@]}
 sum_layouts=0
 
-for i in "${layouts[@]}"; do
+for i in "${layouts_slots[@]}"; do
   sum_layouts=$((sum_layouts + i))
 done
 TARGET_WORKSPACES=$((num_layouts + (((num_urls - sum_layouts) + 3) / 4) ))
@@ -41,7 +41,7 @@ do
     i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) "workspace $i;"
     sleep 1
     echo "Adding layout ${layouts[$i]:-4}"
-    i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) "append_layout /home/pi/.config/i3/layouts/layout${layouts[$((i-1))]:-4}.json"
+    i3-msg --socket $(ls /run/user/$(id -u)/i3/ipc-socket.*) "append_layout /home/pi/.config/i3/layouts/${layouts[$((i-1))]:-4}.json"
     sleep $DELAY
 done
 for url in "${urls[@]}"; do

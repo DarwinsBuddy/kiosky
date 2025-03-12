@@ -1,2 +1,4 @@
 .deploy.sh
-src/urls.sh
+src/config.sh
+src/update_config.sh
+src/update_layouts.sh

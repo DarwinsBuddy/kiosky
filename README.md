@@ -31,8 +31,12 @@ set lightdm `autologin-user-session=i3` in `/etc/lightdm/lightdm.conf`
 2. (optional) setup public-key login with `ssh-copy-id` for easier deployment
 3. (optional) Edit the config `vim src/launch.sh`
 4. Change urls you want to display
-   `cp urls.example.sh src/urls.sh`
-5. Deploy the config `./deploy.sh`
+   `cp config.example.sh src/config.sh`
+5. (optional) Setup script for dynamically updating the config
+   `cp update_config.example.sh src/update_config.sh`
+6. (optional) Setup script for dynamically updating the layouts
+   `cp update_layouts.example.sh src/update_layouts.sh`
+7. Deploy the config `./deploy.sh`
 
 
 ### Extensions

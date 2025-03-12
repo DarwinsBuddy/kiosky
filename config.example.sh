@@ -13,3 +13,9 @@ layouts=(
     "4" # layout of workspace 1
     "4"  # layout of workspace 2
 )
+
+
+layouts_slots=(
+    "4" # number of windows in layout of workspace 1
+    "4"  # number of windows in layout of workspace 2
+)
