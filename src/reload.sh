@@ -6,8 +6,8 @@ export DISPLAY=:0.0
 # Get all window IDs
 for win in $(xdotool search --all --class "$CLASS_NAME"); do
     # Send Ctrl+Shift+R to each window
-    xdotool windowactivate "$win"
-    sleep 1
-    xdotool key --window "$win" F5
+    xdotool windowactivate --sync "$win"
+    #sleep 1
+    xdotool key F5
     sleep 1
 done

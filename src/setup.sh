@@ -56,6 +56,7 @@ echo "The i3 config file has been updated. All scripts have been replaced"
 cron_jobs=(
   "*/2 * * * * ~/.config/i3/next_workspace.sh"
   "*/1 * * * * cd ~/.config/i3 && ./update.sh > ~/update.log 2>&1"
+  "*/10 * * * * cd ~/.config/i3 && ./reload.sh
   "0 22 * * * ~/.config/i3/hdmi.sh off"
   "0 7 * * * ~/.config/i3/hdmi.sh on"
 )
