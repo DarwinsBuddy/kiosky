@@ -7,7 +7,7 @@ source "/home/pi/.config/i3/env.sh"
 # Kill all browser windows
 pkill chromium
 sleep 2
-ARGS="--new-window --disable-application-cache --disk-cache-size=0 --disable-features=Translate"
+ARGS="--new-window --disable-application-cache --disk-cache-size=0 --disable-features=Translate --hide-scrollbars"
 
 # Get the size of the array
 num_layouts=${#layouts[@]}
