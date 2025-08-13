@@ -1,4 +1,5 @@
 .deploy.sh
+src/config_old.sh
 src/config.sh
 src/update_config.sh
 src/update_layouts.sh
